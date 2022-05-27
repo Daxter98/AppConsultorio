@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nombre Consultorio</title>
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/app/CSS/styles.css">
 </head>
 <body onload="cargarDatosCita()">
 
     <header class="header">
-        <img src="/IMG/logo index.png" alt="logo-consultorio.png">
+        <img src="/app/IMG/logo index.png" alt="logo-consultorio.png">
     </header>
 
     <main class="formulario">
@@ -37,11 +37,21 @@
 
         
     <div class="boton-regreso">
-        <a href="/HTML/ver-citas.html">Regresar</a>
+        <a href="/app/HTML/ver-citas.html">Regresar</a>
     </div>
     
     </main>
 
-    <script src="/JS/script.js"></script>
+    <script src="/app/JS/script.js"></script>
+    <script>
+        const fechaHoy = new Date();
+        const dtFechaCita = document.getElementById("fecha");
+        const day = fechaHoy.getDate();
+        let month = fechaHoy.getMonth() + 1;
+        const year = fechaHoy.getFullYear()
+        month = month < 10 ? "0" + month.toString() : month.toString()
+        const minDate = `${year}-${month}-${day}`;
+        dtFechaCita.setAttribute("min", minDate);
+    </script>
 </body>
 </html>
