@@ -1,4 +1,4 @@
-const API_ENDPOINT = "https:/consultorio.azurewebsites.net";
+const API_ENDPOINT = "https://appconsultorio.azurewebsites.net/";
 
 function validar() {
   var usuario = document.getElementById("usuario").value;
