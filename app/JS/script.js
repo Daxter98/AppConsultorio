@@ -1,4 +1,4 @@
-const API_ENDPOINT = "https://appconsultorio.azurewebsites.net";
+const API_ENDPOINT = "https:/consultorio.azurewebsites.net";
 
 function validar() {
   var usuario = document.getElementById("usuario").value;
@@ -6,7 +6,7 @@ function validar() {
 
   if (usuario == "admin" && contraseña == "password") {
     alert("Usuario y Contraseña validos, BUEN DIA!");
-    window.location.href = "/app/HTML/index.html";
+    window.location.href = "/HTML/index.html";
   } else {
     alert("Verifique sus credenciales (contraseña o usuario no valido)");
   }
@@ -138,7 +138,7 @@ const obtenerCitasMain = () => {
                 btnModificar.innerHTML = "Modificar";
         
                 btnModificar.onclick = (e) => {
-                window.location.href = `/app/HTML/modificar-cita.html?id_cita=${cita.id}`;
+                window.location.href = `/HTML/modificar-cita.html?id_cita=${cita.id}`;
                 };
         
                 celdaHora.appendChild(document.createElement("br"));
@@ -195,7 +195,7 @@ const obtenerCitas = () => {
         btnModificar.innerHTML = "Modificar Cita";
         btnModificar.onclick = (e) => {
           // const rowId = e.target.parentNode.parentNode.id;
-          window.location.href = `/app/HTML/modificar-cita.html?id_cita=${cita.id}`;
+          window.location.href = `/HTML/modificar-cita.html?id_cita=${cita.id}`;
         };
 
         const btnEliminar = document.createElement("button");
@@ -239,7 +239,7 @@ const obtenerPacientes = () => {
 
         btnModificar.onclick = (e) => {
           //const rowId = e.target.parentNode.parentNode.id; Buena forma para obtener el id de una fila pero innecesario de momento.
-          window.location.href = `/app/HTML/modificar-datos.html?id_paciente=${paciente.id}`;
+          window.location.href = `/HTML/modificar-datos.html?id_paciente=${paciente.id}`;
         };
 
         const btnEliminar = document.createElement("button");
