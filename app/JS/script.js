@@ -315,7 +315,8 @@ const registrarCita = () => {
     .then((res) => {
       return res.json();
     })
-    .then((data) => console.log(data));
+    .then((data) => alert(`Cita con ID ${data.id} registrada correctamente`))
+    .catch(error => alert(`Ocurrio un error al registrar \n error: ${error}`));
 };
 
 const actualizarPaciente = () => {
@@ -347,7 +348,7 @@ const actualizarPaciente = () => {
     .then((res) => {
       return res.json();
     })
-    .then((data) => console.log(`Registro con ID: ${data.id} actualizado`));
+    .then((data) => alert(`Registro con ID: ${data.id} actualizado`));
 };
 
 const actualizarCita = () => {
@@ -420,7 +421,7 @@ const eliminarCita = (id_cita) => {
       })
       .then((data) => {
         if (data.ok) {
-          alert("Paciente Eliminado con Exito");
+          alert("Cita Eliminada con Exito");
         }
       });
   };

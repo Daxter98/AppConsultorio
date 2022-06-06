@@ -36,7 +36,7 @@
                 <label for="hora-cita" class="label">Hora de cita:</label>
                 <input type="time" id="hora-cita">
             </div>
-            <input id="registrar-cita" type="button" value="Registrar" onclick="registrarCita(),AltaCita()">
+            <input id="registrar-cita" type="button" value="Registrar" onclick="registrarCita()">
         </form>
 
         
@@ -51,10 +51,11 @@
     <script>
         const fechaHoy = new Date();
         const dtFechaCita = document.getElementById("fecha");
-        const day = fechaHoy.getDate();
+        let day = fechaHoy.getDate();
         let month = fechaHoy.getMonth() + 1;
         const year = fechaHoy.getFullYear()
         month = month < 10 ? "0" + month.toString() : month.toString()
+        day = day < 10 ? "0" + day.toString() : day.toString()
         const minDate = `${year}-${month}-${day}`;
         dtFechaCita.setAttribute("min", minDate);
     </script>
