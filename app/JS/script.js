@@ -282,7 +282,7 @@ const registrarPaciente = () => {
     .then((res) => {
       return res.json();
     })
-    .then((data) => alert(`Paciente con ID ${data.paciente.id} registrado exitosamente`))
+    .then((data) => alert(`Paciente con ID ${data.id} registrado exitosamente`))
     .catch(error => alert(error));
 };
 
