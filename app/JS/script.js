@@ -81,7 +81,7 @@ const popularLista = () => {
 
         elementoSelect.appendChild(option);
       });
-    });
+    }).catch(error => console.log(error));
 };
 
 // Main Obtener Citas
@@ -282,7 +282,8 @@ const registrarPaciente = () => {
     .then((res) => {
       return res.json();
     })
-    .then((data) => console.log(data));
+    .then((data) => alert(`Paciente con ID ${data.paciente.id} registrado exitosamente`))
+    .catch(error => alert(error));
 };
 
 const registrarCita = () => {
