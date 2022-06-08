@@ -271,6 +271,11 @@ const registrarPaciente = () => {
     data[field.id] = field.value;
   });
 
+  if(!data.email.includes("@")){
+    alert(`El correo ${data.email} no tiene un formato valido\n Debe ser de tipo usario@dominio`);
+    return;
+  }
+
   fetch(URL, {
     method: "POST",
     headers: {
@@ -336,6 +341,11 @@ const actualizarPaciente = () => {
   });
 
   data.id = id_paciente;
+
+  if(!data.email.includes("@")){
+    alert(`El correo ${data.email} no tiene un formato valido\n Debe ser de tipo usario@dominio`);
+    return;
+  }
 
   fetch(URL, {
     method: "PUT",
